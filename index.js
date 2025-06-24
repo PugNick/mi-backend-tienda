@@ -11,7 +11,7 @@ app.use(cookieParser());
 
 const allowedOrigins = [
     process.env.FRONTEND_URL,
-    "https://n5jhvxqp-5173.brs.devtunnels.ms" // 🔥 agregás la nueva URL pública
+    "https://n5jhvxqp-5173.brs.devtunnels.ms" // (opcional, si seguís probando desde ahí)
 ];
 
 // Configurar CORS para permitir credenciales
