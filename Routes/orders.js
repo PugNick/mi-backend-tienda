@@ -175,9 +175,9 @@ router.post("/:id/pagar", authMiddleware, async (req, res) => {
                 installments: 1,
             },
             back_urls: {
-                success: `https://n5jhvxqp-5173.brs.devtunnels.ms/success`,
-                failure: `https://n5jhvxqp-5173.brs.devtunnels.ms/failure`,
-                pending: `https://n5jhvxqp-5173.brs.devtunnels.ms/pending`,
+                success: `https://vestiree.netlify.app/success`,
+                failure: `https://vestiree.netlify.app/failure`,
+                pending: `https://vestiree.netlify.app/pending`,
             },
             auto_return: "approved",
         };
