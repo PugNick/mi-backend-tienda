@@ -31,12 +31,10 @@ const MONGO_URL = process.env.MONGO_URL;
 
 // Conectar a MongoDB
 mongoose
-    .connect(MONGO_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
+    .connect(MONGO_URL)
     .then(() => console.log("📡 Conectado a MongoDB"))
     .catch((err) => console.error("❌ Error al conectar a MongoDB:", err));
+
 
 // Ruta principal
 app.get("/", (req, res) => {
