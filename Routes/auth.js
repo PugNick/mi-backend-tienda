@@ -77,9 +77,14 @@ router.post("/login", async (req, res) => {
 
 // Cerrar sesión
 router.post("/logout", (req, res) => {
-    res.clearCookie("token");
+    res.clearCookie("token", {
+        httpOnly: true,
+        secure: true,
+        sameSite: "None",
+    });
     res.json({ message: "Sesión cerrada" });
 });
+
 
 // 🔹 NUEVA RUTA: Obtener datos del usuario autenticado
 router.get("/me", authMiddleware, async (req, res) => {
